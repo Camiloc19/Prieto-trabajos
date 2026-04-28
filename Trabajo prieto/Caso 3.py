@@ -1,9 +1,11 @@
 print("Caso 3")
 
+a = float(input("Ingrese el punto a: "))
+b= float(input("Ingrese el punto b: "))
 c = float(input("Ingrese el punto c: "))
 
 
-if c >= -4.0 and c <= 3.0:
+if c >= a and c <= b:
     resultado = "true"
 else:
     resultado = "false"
