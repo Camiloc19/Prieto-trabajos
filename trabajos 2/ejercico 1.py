@@ -1,24 +1,24 @@
-numero = int(input("Ingresa el número de productores:\n"))
+productores = int(input("Ingresa el número de productores:\n"))
 
 mejor_prom = 0
 mejor_producto = 0
 
-for i in range(numero):
-    print(f"\nProductor {i+1}")
+for n in range(productores):
+    print(f"\nProductor {n+1}")
 
     toneladas = []
     suma_toneladas = 0
     suma_hectareas = 0
 
-    for j in range(3):
-        print(f"Año {j+1}")
+    for a in range(3):
+        print(f"Año {a+1}")
         
-        hac = float(input("Cantidad de hectáreas: "))
+        hec = float(input("Cantidad de hectáreas: "))
         ton = float(input("Cantidad de toneladas: "))
 
         toneladas.append(ton)
         suma_toneladas += ton
-        suma_hectareas += hac
+        suma_hectareas += hec
 
     # ordenar después de llenar la lista
     toneladas.sort(reverse=True)
@@ -33,7 +33,7 @@ for i in range(numero):
 
     if prom_toneladas > mejor_prom:
         mejor_prom = prom_toneladas
-        mejor_producto = i + 1
+        mejor_producto = n + 1
 
 # fuera del ciclo
 print("\nEl productor con mejor promedio es:", mejor_producto)
