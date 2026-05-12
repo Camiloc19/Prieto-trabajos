@@ -31,8 +31,9 @@ while True:
                 print("Clave Correcta")
                 break
             else:
-                print("ingresa una contraseña validad.")
-
+                nueva_clave =int(input("Ingrese nueva contraseña : "))
+                nueva_clave == clave
+                break
         # menú distribuidor
         while True:
             print("\n** Ingreso como Distribuidor **")
@@ -41,13 +42,13 @@ while True:
             print("3. Inventario")
             print("4. Salir")
 
-            op = input("Seleccione lo que desea realizar: ")
+            opcion = input("Seleccione lo que desea realizar: ")
 
-            if op == "1":
+            if opcion == "1":
                 maquina_habilitada = not maquina_habilitada
                 print("Máquina habilitada" if maquina_habilitada else "Máquina deshabilitada")
 
-            elif op == "2":
+            elif opcion == "2":
                 while True:
                     codigo = int(input("Ingrese código (0 para salir): "))
                     if codigo == 0:
@@ -59,13 +60,13 @@ while True:
                         print("Producto agregado")
                     else:
                         print("Código inválido")
-
-            elif op == "3":
+            
+            elif opcion == "3":
                 print("\nInventario:")
-                for cod, cant in inventario.items():
-                    print(f"{cod} - {productos[cod][0]}: {cant}")
+                for codigo, cantidad in inventario.items():
+                    print(f"{codigo} - {productos[codigo][0]}: {cantidad}")
 
-            elif op == "4":
+            elif opcion == "4":
                 break
 
             else:
